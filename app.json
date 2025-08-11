@@ -9,14 +9,29 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.matthew-ukari.roomly",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Roomly uses your location to show your position on the map.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Roomly uses your location for background navigation and delivery tracking."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.matthew_ukari.roomly",
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION"
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyDQSVvuNZs4vKiN29WIP_nR8pYi3PjInIo"
+        }
+      }
     },
     "web": {
       "bundler": "metro",
@@ -33,10 +48,26 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
+      ],
+      "expo-font",
+      [
+        "@rnmapbox/maps",
+        {
+          "RNMapboxMapsImpl": "mapbox",
+          "RNMapboxMapsVersion": "11.6.0",
+          "RNMapboxMapsDownloadToken": "sk.eyJ1IjoibWF0dGhldy11a2FyaSIsImEiOiJjbWU0MmRveXcwZG4yMnJvdHUyNHNqbnF4In0.-glsupyY4TePKa-PguWKqg"
+        }
       ]
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "43067b25-e3f1-4cf4-9074-550f1a17fb16"
+      }
+    },
+    "owner": "matthew_ukari"
   }
 }

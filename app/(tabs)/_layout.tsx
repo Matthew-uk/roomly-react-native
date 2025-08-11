@@ -1,45 +1,130 @@
+// app/(tabs)/_layout.tsx
+import BottomTabBarIcon from '@/components/dashboard/BottomTabBarIcon';
 import { Tabs } from 'expo-router';
-import React from 'react';
-import { Platform } from 'react-native';
-
-import { HapticTab } from '@/components/HapticTab';
-import { IconSymbol } from '@/components/ui/IconSymbol';
-import TabBarBackground from '@/components/ui/TabBarBackground';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
+import { CalendarDays, Heart, Home, Search, User } from 'lucide-react-native';
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
   return (
+    // <SafeAreaView
+    //   style={{ flex: 1, backgroundColor: '#fff' }}
+    //   edges={['bottom']}
+    // >
     <Tabs
+      //   screenOptions={{
+      //     headerShown: false,
+      //     tabBarShowLabel: false,
+      //     tabBarStyle: {
+      //       position: 'absolute',
+      //       height: 80,
+      //       bottom: 40,
+      //       shadowColor: '#1a1a1a',
+      //       shadowOffset: {
+      //         width: 0,
+      //         height: 0,
+      //       },
+      //       shadowOpacity: 0.25,
+      //       shadowRadius: 3.5,
+      //       elevation: 5,
+      //       backgroundColor: '#fff',
+      //       borderTopLeftRadius: 50,
+      //       borderTopRightRadius: 50,
+      //       borderBottomLeftRadius: 50,
+      //       borderBottomRightRadius: 50,
+      //       marginHorizontal: 18,
+      //     },
+      //   }}
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
-        tabBarButton: HapticTab,
-        tabBarBackground: TabBarBackground,
-        tabBarStyle: Platform.select({
-          ios: {
-            // Use a transparent background on iOS to show the blur effect
-            position: 'absolute',
+        tabBarShowLabel: false,
+        tabBarStyle: {
+          borderTopLeftRadius: 50,
+          borderTopRightRadius: 50,
+          borderBottomLeftRadius: 50,
+          borderBottomRightRadius: 50,
+          marginHorizontal: 15,
+          height: 60,
+          borderWidth: 1,
+          borderColor: '#4f46e5',
+          position: 'absolute',
+          bottom: 40,
+          backgroundColor: '#fff',
+          shadowColor: '#4f46e5',
+          shadowOffset: {
+            width: 0,
+            height: 2,
           },
-          default: {},
-        }),
-      }}>
+          shadowOpacity: 0.1,
+          shadowRadius: 3.5,
+          elevation: 5,
+        },
+      }}
+    >
       <Tabs.Screen
-        name="index"
+        name="dashboard"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          tabBarIcon: ({ color, focused }) => (
+            <BottomTabBarIcon
+              icon={Home}
+              label="Home"
+              color={color}
+              focused={focused}
+            />
+          ),
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="search"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          tabBarIcon: ({ color, focused }) => (
+            <BottomTabBarIcon
+              icon={Search}
+              label="Search"
+              color={color}
+              focused={focused}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="bookings"
+        options={{
+          tabBarIcon: ({ color, focused }) => (
+            <BottomTabBarIcon
+              icon={CalendarDays}
+              label="Bookings"
+              color={color}
+              focused={focused}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="favorites"
+        options={{
+          tabBarIcon: ({ color, focused }) => (
+            <BottomTabBarIcon
+              icon={Heart}
+              label="Favorites"
+              color={color}
+              focused={focused}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          tabBarIcon: ({ color, focused }) => (
+            <BottomTabBarIcon
+              icon={User}
+              label="Profile"
+              color={color}
+              focused={focused}
+            />
+          ),
         }}
       />
     </Tabs>
+    // </SafeAreaView>
   );
 }
