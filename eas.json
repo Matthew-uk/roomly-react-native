@@ -1,4 +1,5 @@
 {
+  "cli": { "version": ">= 14.0.0", "appVersionSource": "remote" },
   "build": {
     "development": {
       "developmentClient": true,
@@ -9,14 +10,8 @@
       "distribution": "internal",
       "ios": { "simulator": true }
     },
-    "preview": {
-      "distribution": "internal"
-    },
-    "production": {
-      "autoIncrement": true
-    }
+    "preview": { "distribution": "internal" },
+    "production": { "autoIncrement": true }
   },
-  "submit": {
-    "production": {}
-  }
+  "submit": { "production": {} }
 }

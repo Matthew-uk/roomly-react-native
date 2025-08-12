@@ -13,7 +13,8 @@
       "bundleIdentifier": "com.matthew-ukari.roomly",
       "infoPlist": {
         "NSLocationWhenInUseUsageDescription": "Roomly uses your location to show your position on the map.",
-        "NSLocationAlwaysAndWhenInUseUsageDescription": "Roomly uses your location for background navigation and delivery tracking."
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Roomly uses your location for background navigation and delivery tracking.",
+        "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {
