@@ -1,0 +1,74 @@
+[
+  {
+    "id": "h1",
+    "name": "Harbor View Inn",
+    "latitude": 37.795834,
+    "longitude": -122.394417
+  },
+  {
+    "id": "h2",
+    "name": "City Center Suites",
+    "latitude": 37.777834,
+    "longitude": -122.391417
+  },
+  {
+    "id": "h3",
+    "name": "Market Street Lodge",
+    "latitude": 37.803834,
+    "longitude": -122.412417
+  },
+  {
+    "id": "h4",
+    "name": "Union Square Residences",
+    "latitude": 37.770834,
+    "longitude": -122.416417
+  },
+  {
+    "id": "h5",
+    "name": "Golden Gate Hotel",
+    "latitude": 37.807834,
+    "longitude": -122.402417
+  },
+  {
+    "id": "h6",
+    "name": "Downtown Boutique Stay",
+    "latitude": 37.765834,
+    "longitude": -122.399417
+  },
+  {
+    "id": "h7",
+    "name": "Bayline Hotel",
+    "latitude": 37.790834,
+    "longitude": -122.428417
+  },
+  {
+    "id": "h8",
+    "name": "SoMa Rest & Suites",
+    "latitude": 37.779834,
+    "longitude": -122.424417
+  },
+  {
+    "id": "h9",
+    "name": "Embarcadero Grand",
+    "latitude": 37.799834,
+    "longitude": -122.386417
+  },
+  {
+    "id": "h10",
+    "name": "Howard Street Hotel",
+    "latitude": 37.773834,
+    "longitude": -122.404417
+  },
+  {
+    "id": "h11",
+    "name": "Pierfront Stay",
+    "latitude": 37.786834,
+    "longitude": -122.378417
+  },
+  {
+    "id": "h12",
+    "name": "Mission Gate Hotel",
+    "latitude": 37.762834,
+    "longitude": -122.411417
+  }
+]

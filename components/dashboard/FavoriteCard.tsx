@@ -21,9 +21,16 @@ export interface PropertyCardProps {
   images: string[];
   latitude: number;
   longitude: number;
+  handleFavorite: () => void;
 }
 
-const HeartBox = ({ hotelId }: { hotelId?: string }) => {
+const HeartBox = ({
+  hotelId,
+  handleToggle,
+}: {
+  hotelId?: string;
+  handleToggle: () => void;
+}) => {
   const [isHearted, setIsHearted] = useState(false);
   const [loading, setLoading] = useState(false);
   const { user } = useAuthStore();
@@ -50,6 +57,7 @@ const HeartBox = ({ hotelId }: { hotelId?: string }) => {
 
       // API should return { isFavorite: boolean }
       setIsHearted(res?.isFavorite ?? !isHearted);
+      handleToggle();
     } catch (error) {
       console.error('Failed to toggle favorite:', error);
     } finally {
@@ -75,7 +83,7 @@ const HeartBox = ({ hotelId }: { hotelId?: string }) => {
   );
 };
 
-export default function PropertyCard(props: PropertyCardProps) {
+export default function FavoriteCard(props: PropertyCardProps) {
   const {
     _id,
     name,
@@ -101,7 +109,7 @@ export default function PropertyCard(props: PropertyCardProps) {
           showSpinner={false}
           imageProps={{ resizeMode: 'cover' }}
         >
-          <HeartBox hotelId={_id} />
+          <HeartBox hotelId={_id} handleToggle={props.handleFavorite} />
         </SkeletonImage>
       </View>
 

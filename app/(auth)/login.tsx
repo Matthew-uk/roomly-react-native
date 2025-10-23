@@ -50,7 +50,7 @@ export default function LoginScreen() {
         type: 'success',
         text1: 'Login Successful',
       });
-      setTimeout(() => router.replace('/(tabs)/dashboard'), 1000);
+      setTimeout(() => router.replace('/(dashboard)'), 1000);
     } catch (error: any) {
       Toast.show({
         type: 'error',
@@ -144,7 +144,7 @@ export default function LoginScreen() {
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => router.push('/(tabs)/dashboard')}
+            onPress={() => router.push('/(dashboard)')}
             className="mt-4"
           >
             <Text className="font-regular text-center text-base text-gray-600">

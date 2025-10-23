@@ -1,7 +1,7 @@
 import axios from 'axios';
 import * as SecureStore from 'expo-secure-store';
 
-export const getHotels = async (city: string): Promise<any> => {
+export const getHotels = async (): Promise<any> => {
   const token = await SecureStore.getItemAsync('token');
   try {
     const response = await axios.get(

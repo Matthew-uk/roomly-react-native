@@ -8,14 +8,37 @@ export default function ModalLayout() {
         options={{
           title: 'Modal Home',
           presentation: 'modal',
-          headerShown: false,
+          headerShown: true,
+          headerTitle: 'Filter',
+          headerTitleStyle: {
+            fontSize: 20,
+            fontFamily: 'Montserrat-Bold',
+          },
+          headerBackTitle: 'Back',
+          headerBackTitleStyle: {
+            fontSize: 16,
+            fontFamily: 'bold',
+          },
+          headerBackButtonDisplayMode: 'minimal',
         }} // Customize the title if needed
       />
       <Stack.Screen
         name="maps"
         options={{
           presentation: 'fullScreenModal',
-          headerShown: false,
+          headerShown: true,
+          headerTitle: 'Maps',
+          headerTitleStyle: {
+            fontSize: 20,
+            fontFamily: 'Montserrat-Bold',
+          },
+          headerBackTitle: 'Back',
+          headerBackTitleStyle: {
+            fontSize: 16,
+            fontFamily: 'bold',
+          },
+          headerBackButtonDisplayMode: 'default',
+          //   headerShown: false,
         }}
       />
     </Stack>

@@ -6,9 +6,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        regular: ['Montserrat_400Regular'],
-        medium: ['Montserrat_500Medium'],
-        bold: ['Montserrat_700Bold'],
+        regular: ['Urbanist-Regular'],
+        medium: ['Urbanist-Semibold'],
+        bold: ['Urbanist-Bold'],
       },
       colors: {
         primary: {

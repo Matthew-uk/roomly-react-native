@@ -48,7 +48,7 @@ export const FormField: React.FC<FormFieldProps> = ({
           rules={rules}
           render={({ field: { onChange, onBlur, value } }) => (
             <TextInput
-              className="flex-1 font-regular text-base text-gray-900 mb-2 h-8 px-2 bg-white"
+              className="flex-1 font-regular text-base text-gray-900 mb-2 h-8 px-2 bg-white tracking-wide"
               placeholder={placeholder}
               placeholderTextColor="#9CA3AF"
               secureTextEntry={secureTextEntry}
